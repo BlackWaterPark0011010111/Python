@@ -2,7 +2,7 @@ from animal import Animal
 
 class Dog(Animal):
     def __init__(self):
-        super().__init__(4,2)
+        super().__init__(4,2)# paws and eyes
 
     def breathe(self):
         super().breate()
@@ -12,4 +12,3 @@ class Dog(Animal):
         super().walk()
         print("DOGS LOVE TO RUN")
 
-        

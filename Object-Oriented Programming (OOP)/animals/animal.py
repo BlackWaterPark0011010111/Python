@@ -11,4 +11,4 @@ class Animal:
         print("THIS ANIMAL IS WALKNG")
 
     def summary(self):
-        print(f"THIS ANIMAL HAS{self.number_of_legs} legs and{self.number_of_eyes} eyes")
+        print(f"THIS ANIMAL HAS  {self.number_of_legs} legs and {self.number_of_eyes} eyes")

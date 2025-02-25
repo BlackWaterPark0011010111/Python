@@ -1,5 +1,6 @@
 from german_shepard import GermanShepard
-
+from animal import Animal
+from dog import Dog
 if __name__ == "__main__":
     animal = Animal(2, 2)  
     dog = Dog() 

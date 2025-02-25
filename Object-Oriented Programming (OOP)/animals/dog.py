@@ -5,7 +5,7 @@ class Dog(Animal):
         super().__init__(4,2)# paws and eyes
 
     def breathe(self):
-        super().breate()
+        super().breathe()
         print("DOGS LOVE TO BREATHE WITH THEIR MOUTHS OPEN")
 
     def walk(self):

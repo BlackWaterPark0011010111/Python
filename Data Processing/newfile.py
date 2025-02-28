@@ -5,7 +5,7 @@ dict = {
 'b' :2,
 'c' :[11,22,3,345,]
 
-}
+} 
 
 print('static coding', dict['c'][1])
 

@@ -28,7 +28,7 @@ def chunks(data):
 
     for key, values in data.items():
     
-        if len(curr_chunk) == sizeof:
+        if len(curr_chunk) == size:
             chunk_list.append(curr_chunk)
     
    

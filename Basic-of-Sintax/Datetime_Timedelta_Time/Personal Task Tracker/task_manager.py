@@ -7,7 +7,7 @@ class Task:
     def __str__(self):
         return f"{self.title} (UNTIL {self.due_date.strftime('%Y-%m-%d')})"
 
-class TaskManager:
+class TaskManager: 
     def __init__(self):
         self.tasks = {}
 

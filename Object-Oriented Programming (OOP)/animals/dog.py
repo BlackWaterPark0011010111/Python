@@ -3,7 +3,6 @@ from animal import Animal
 class Dog(Animal):
     def __init__(self):
         super().__init__(4,2)# paws and eyes
-
     def breathe(self):
         super().breathe()
         print("DOGS LOVE TO BREATHE WITH THEIR MOUTHS OPEN")

@@ -9,11 +9,9 @@ if __name__ == "__main__":
     animal.summary()
     dog.summary()
     german_shepard.summary()
-
     animal.breathe()
     dog.breathe()
     german_shepard.breathe()
-
     animal.walk()
     dog.walk()
     german_shepard.walk()

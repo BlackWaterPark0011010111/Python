@@ -34,3 +34,15 @@ class Train:
 
 
 if __name__ == "__main__":
+    
+    station1 = Station("Central", "Berlin")
+    station2 = Station("Grand Station", "Paris")
+    print(station1)
+    print(station2)
+    train1 = Train("ICE 789", 300, station1)
+    train2 = Train("TGV 450", 350, station2)
+    print(train1)
+    print(train2)
+    train1.set_capacity(320)
+    print(f"Updated {train1}")
+    print("Train 1 Station Name:", train1.get_station_name())

@@ -34,7 +34,7 @@ keys метода словаря. Этот
 словаря.
 Словари имеют и другие методы 
 для получения значений
-"""
+
 profile = {
      "name": "Mary Schmidt",
      "age": 54
@@ -42,35 +42,33 @@ profile = {
 for key in iterables:
      print(key)
 
-"""name
-    age"""
+name
+    age
 
 
 for key in iterables.keys():
      print(key)
-"""
+
 name
-age"""
-
-
+age
 """
-
+""" 
 Значения метода выдает значения каждого элемента.Метод items выдает кортеж кортеж, содержащий ключ и 
 значение каждого элементаЭтот кортеж может быть распакован в 
-той же инструкции for, чтобы сделать код более читабельным"""
 for value in iterables.values():
      print(value)
-"""
+той же инструкции for, чтобы сделать код более читабельным
+
 Mary Schmidt
-54"""
+54
 for item in iterables.items():
      print(item)
-"""
+
 ('name', 'Mary Schmidt')
-('age', 54)"""
+('age', 54)
 for key, value in iterables.items():
      print(key, "=>", value)
-"""
+
 name => Mary Schmidt
 age => 54
 """

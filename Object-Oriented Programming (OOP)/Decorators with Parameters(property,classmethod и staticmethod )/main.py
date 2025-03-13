@@ -1,4 +1,4 @@
-# Пример 1: Простой декоратор для логирования
+# Простой декоратор для логирования
 def logger(func):
     def wrapper(*args, **kwargs):
         print(f"func  {func.__name__} with arguments {args}, {kwargs}")

@@ -5,7 +5,7 @@ from typing import List
 # AbstractBaseClass 
 class Astronaut(ABC):
     def __init__(self, name: str, experience: int):
-        self._name = name  # Encapsulation
+        self._name = name  #Encapsulation
         self._experience = experience
 
     @property
@@ -17,39 +17,39 @@ class Astronaut(ABC):
         return self._experience
 
     @abstractmethod
-    def perform_task(self) -> str:  # Abstract method 
+    def perform_task(self) -> str:  #Abstract method 
         pass
 
-    def __str__(self) -> str:  # Magic method for string representation
+    def __str__(self) -> str:  #Magic method for string representation
         return f"{self.__class__.__name__}: {self._name}, Experience: {self._experience} years"
 
-# Pilot Astronaut (inherits from Astronaut)
+#Pilot Astronaut (inherits from Astronaut)
 class Pilot(Astronaut):
-    def perform_task(self) -> str:  # Polymorphism:
+    def perform_task(self) -> str:  #Polymorphism
         return f"{self._name} is piloting the spaceship."
 
-# Engineer Astronaut (inherits from Astronaut)
+#Engineer Astronaut (inherits from Astronaut)
 class Engineer(Astronaut):
-    def perform_task(self) -> str:  # Polymorphism: 
+    def perform_task(self) -> str:  #Polymorphism
         return f"{self._name} is repairing the spaceship."
 
-# Spaceship Class
+#Spaceship Class
 @dataclass
 class Spaceship:
     name: str
     capacity: int
-    astronauts: List[Astronaut] = None  # Composition: spaceship has astronauts
+    astronauts: List[Astronaut] = None  #Composition: spaceship has astronauts
 
     def __post_init__(self):
         if self.astronauts is None:
             self.astronauts = []
 
-    def add_astronaut(self, astronaut: Astronaut):  # Composition: adding an astronaut
+    def add_astronaut(self, astronaut: Astronaut):  #Composition: adding an astronaut
         if len(self.astronauts) >= self.capacity:
             raise ValueError("Spaceship is at full capacity!")
         self.astronauts.append(astronaut)
 
-    def __str__(self) -> str:  # Magic method for string representation
+    def __str__(self) -> str:  #Magic method for string representation
         return f"Spaceship: {self.name}, Capacity: {self.capacity}, Astronauts: {len(self.astronauts)}"
 
 
@@ -57,7 +57,7 @@ class Spaceship:
 
 
 
-# MissionControlCenter (Singleton)
+#MissionControlCenter (Singleton)
 class MissionControl:
     _instance = None
 
@@ -67,10 +67,10 @@ class MissionControl:
             cls._instance.missions = []
         return cls._instance
 
-    def add_mission(self, mission):  # adding a mission
+    def add_mission(self, mission):  #adding a mission
         self.missions.append(mission)
 
-    def list_missions(self) -> List[str]:  # DRY: 
+    def list_missions(self) -> List[str]:  #DRY: 
         return [str(mission) for mission in self.missions]
 
 
@@ -78,7 +78,7 @@ class MissionControl:
 class Mission:
     name: str
     spaceship: Spaceship 
-    # Composition: 
+    #Composition: 
     astronauts: List[Astronaut]  #mission has astronauts
 #Polymorphism: 
     def start(self) -> str:  #astronaut performs their task

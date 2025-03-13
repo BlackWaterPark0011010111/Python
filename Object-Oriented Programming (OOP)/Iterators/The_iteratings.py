@@ -1,4 +1,4 @@
-Итерационные таблицы, как следует из названия, используются 
+"""Итерационные таблицы, как следует из названия, используются 
 для одной основной цели - итерации.
 Существует также целый ряд встроенных 
 функций, для которых итерации требуются в качестве 
@@ -9,13 +9,13 @@
 количество элементов в переданной итерируемой таблице 
 (в данном случае - строке).
 То же самое относится к любому типу 
-итерируемых.
- iterables_list = [
+итерируемых."""
+iterables_list = [
     "string", "list", "set",
     "кортеж", "словарь"
 ]
- for item in iterables_list:
- print(item, len(item))
+for item in iterables_list:
+     print(item, len(item))
 
 """string 6
 list 4
@@ -60,20 +60,20 @@ age"""
 той же инструкции for, чтобы сделать код более читабельным"""
 for value in iterables.values():
      print(value)
-
+"""
 Mary Schmidt
-54
- for item in iterables.items():
+54"""
+for item in iterables.items():
      print(item)
-
+"""
 ('name', 'Mary Schmidt')
-('age', 54)
- for key, value in iterables.items():
+('age', 54)"""
+for key, value in iterables.items():
      print(key, "=>", value)
-
+"""
 name => Mary Schmidt
 age => 54
-
+"""
 
 
 

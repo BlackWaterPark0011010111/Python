@@ -95,13 +95,13 @@ print( ordinary() )
 Если декорируемая функция имеет параметры мы должны включить их во внутреннюю функцию декоратора
 и включить их в вызов func.Использование аргументов функцииМы можем оперировать или не оперировать этими аргументами"""
 
-def make_capitalized_arguments(func):
+def make_capitalized(func):
     def inner(*args):
         capitalized = [w.capitalize() 
                        for w in args]
         return func(*capitalized)
     return inner
-@make_capitalized_arguments
+@make_capitalized
 def greeting(first, last):
     return f"Hello, {first} {last}!"
 print( greeting("jAMES", "bROWN") )
@@ -116,7 +116,7 @@ print( greeting("jAMES", "bROWN") )
 Теперь мы можем указать, какие из аргументов ключевого слова функции мы следует писать заглавными буквами"""
 
 
-def make_capitalized_arguments(*deco_args):
+def make_capitalized(*deco_args):
     def decorator(func):
         def inner(**kwargs):
             data = []
@@ -129,7 +129,7 @@ def make_capitalized_arguments(*deco_args):
         return inner
     return decorator
 
-@make_capitalized_arguments("first")
+@make_capitalized("first")
 def greeting(first, last):
     return f"Hello, {first} {last}!"
 

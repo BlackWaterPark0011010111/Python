@@ -226,8 +226,8 @@ for pos, (key, val) in enumerate(dict.items()):
 nums = [1, 2, 3]
 eng = ("one", "two", "three")
 zip1 = zip(nums, eng)
- print(zip1)
-<zip object at 0x7ff4f285cd80>
+print(zip1)
+#<zip object at 0x7ff4f285cd80>
 for item in zip(nums, eng):
      print(item)
 
@@ -347,12 +347,12 @@ dict1 = [
      {"name": "Lucy", "age": 25}
  ]
  
- by_age = lambda user: user["age"]
- by_name = lambda user: user["name"]
- print(sorted(dict1, key=by_age))
+by_age = lambda user: user["age"]
+by_name = lambda user: user["name"]
+print(sorted(dict1, key=by_age))
 [{'name': 'Lucy', 'age': 25}, {'name': 'John', 
 'age': 31}, {'name': 'Mary', 'age': 46}]
- print(sorted(dict1, key=by_name))
+print(sorted(dict1, key=by_name))
 [{'name': 'John', 'age': 31}, {'name': 'Lucy', 
 'age': 25}, {'name': 'Mary', 'age': 46}]
 

@@ -20,7 +20,7 @@ def my_decorator(func):
 
 @my_decorator
 def say_hello(name):
-    """Функция, которая просто говорит привет."""
+    """just says hello"""
     print(f"hello, {name}!")
 
 say_hello("Jack")
@@ -39,7 +39,7 @@ def my_decorator_with_wraps(func):
 
 @my_decorator_with_wraps
 def say_goodbye(name):
-    """Функция говорит пока."""
+    """just says hello"""
     print(f"Bye, {name}!")
 
 say_goodbye("me")

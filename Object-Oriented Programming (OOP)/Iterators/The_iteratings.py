@@ -285,7 +285,7 @@ fra):
 1. one drei un un
 2. two zwei dos deux
 3. three ein tres trois
-"""
+
 nums = [1, 2, 3, 4, 5]
 print(sum(nums), max(nums), min(nums))
 15 5 1
@@ -304,7 +304,7 @@ TypeError: unsupported operand type(s) for +:
 # -----e a
 
 """
-
+"""
 
 Функция sorted возвращает новый список в 
 алфавитном или числовом порядке. 
@@ -318,20 +318,20 @@ TypeError: unsupported operand type(s) for +:
 Он принимает аргумент ключевого слова 
 reverse как булево значение, которое по умолчанию равно False
 """
- nums = [4, 3, 5, 2, 1]
- print(sorted(nums))
+nums = [4, 3, 5, 2, 1]
+print(sorted(nums))
 [1, 2, 3, 4, 5]
- print(nums)
+print(nums)
 [4, 3, 5, 2, 1]
- dict1 = {"c": 2, "b": 1, "a": 3}
- print(sorted(dict1))
+dict1 = {"c": 2, "b": 1, "a": 3}
+print(sorted(dict1))
 ['a', 'b', 'c']
- print(sorted(dict1.values()))
+print(sorted(dict1.values()))
 [1, 2, 3]
- print(sorted(dict1, reverse=True))
+print(sorted(dict1, reverse=True))
 ['c', 'b', 'a']
 
-
+"""
 Функция sorted также может быть использована 
 для сортировки списков словарей 
 списка на основе значений одного из 
@@ -340,7 +340,7 @@ reverse как булево значение, которое по умолчан
 функции в качестве ключевого аргумента. Эта 
 функция должна возвращать значение, которое 
 которое будет использоваться для сортировки.
-
+"""
 dict1 = [
      {"name": "John", "age": 31},
      {"name": "Mary", "age": 46},
@@ -356,7 +356,7 @@ dict1 = [
 [{'name': 'John', 'age': 31}, {'name': 'Lucy', 
 'age': 25}, {'name': 'Mary', 'age': 46}]
 
-
+"""
 
 Некоторые функции используют итерируемые таблицы для возврата значения 
 булево значение, указывающее, соответствует ли итерабель 
@@ -366,19 +366,19 @@ dict1 = [
 истинным.
 Функция all возвращает True только в том случае, если 
 все значения в итерируемой таблице являются истинными.
-
+"""
 a_list = [1, True, "Mary", {1, 2}]
- print(bool(a_list), any(a_list), all(a_list))
-True True True
- a_list = [1, True, "Mary", {}]
- print(bool(a_list), any(a_list), all(a_list))
-True True False
- a_list = [0, False, "", {}]
- print(bool(a_list), any(a_list), all(a_list))
-True False False
+print(bool(a_list), any(a_list), all(a_list))
+#True True True
+a_list = [1, True, "Mary", {}]
+print(bool(a_list), any(a_list), all(a_list))
+#True True False
+a_list = [0, False, "", {}]
+print(bool(a_list), any(a_list), all(a_list))
+#True False False
 
 
-
+"""
 
 Некоторые функции, использующие итерируемые таблицы, возвращают 
 булево значение, указывающее, соответствует ли итерабель 
@@ -388,29 +388,19 @@ True False False
 истинным.
 Функция all возвращает True только в том случае, если 
 все значения в итерируемой таблице являются истинными
-
+"""
 a_list = [1, True, "Mary", {1, 2}]
- print(bool(a_list), any(a_list), all(a_list))
-True True True
- a_list = [1, True, "Mary", {}]
- print(bool(a_list), any(a_list), all(a_list))
-True True False
- a_list = [0, False, "", {}]
- print(bool(a_list), any(a_list), all(a_list))
-True False False
-Some functions use iterables to return a 
-boolean value indicating if the iterable 
-matches a certain condition.
-The function any will return True only if 
-any of the values in the iterable is 
-truthy.
-The function all will return True only if 
-all the values in the iterable are truthy
+print(bool(a_list), any(a_list), all(a_list))
+#True True True
+a_list = [1, True, "Mary", {}]
+print(bool(a_list), any(a_list), all(a_list))
+#True True False
+a_list = [0, False, "", {}]
+print(bool(a_list), any(a_list), all(a_list))
+#True False False
 
 
-
-
-
+"""
 Наиболее распространенные функции в 
 Наиболее распространенные функции в функциональном программировании требуют как 
 итерабельность и функция.
@@ -419,15 +409,15 @@ all the values in the iterable are truthy
 элементу заданной итерируемой таблицы.
 Она возвращает объект map, который представляет собой 
 итерируемый объект, содержащий вывод данного 
-процесс
+процесс"""
 
 _list = [1, 2, 3, 4, 5]
- by_two = lambda num: num * 2
- a_list_by_two = map(by_two, a_list)
- print(a_list_by_two)
-<map object at 0x7f11957546d0>
- print(list(a_list_by_two))
-[2, 4, 6, 8, 10]
+by_two = lambda num: num * 2
+a_list_by_two = map(by_two, a_list)
+print(a_list_by_two)
+# <map object at 0x7f11957546d0>
+print(list(a_list_by_two))
+# [2, 4, 6, 8, 10]
 
 
 
@@ -440,16 +430,16 @@ _list = [1, 2, 3, 4, 5]
 итерируемый объект, содержащий вывод данного 
 процесс"""
 
- nums = [1, 2, 3, 4, 5]
- is_odd = lambda num: (num % 2) != 0
- odds = filter(is_odd, nums)
- print(odds)
-<filter object at 0x7fced01036d0>
- print(list(odds))
-[1, 3, 5]
+nums = [1, 2, 3, 4, 5]
+is_odd = lambda num: (num % 2) != 0
+odds = filter(is_odd, nums)
+print(odds)
+#<filter object at 0x7fced01036d0>
+print(list(odds))
+#[1, 3, 5]
 
 
-
+"""
 
 
 CONSTRUCTORS
@@ -474,7 +464,7 @@ FUNCTIONAL
 - filter()
 
 
-
+"""
 
 
 

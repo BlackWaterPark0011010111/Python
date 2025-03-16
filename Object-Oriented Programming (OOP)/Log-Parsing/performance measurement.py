@@ -6,7 +6,7 @@ from emotion_analyze import SentimentAnalyzer
 LOG_FILE = "app.log"
 
 def process_logs():
-    """Функция для многопоточного анализа логов Function for multi-threaded log analysis"""
+    """Функция для многопоточного анализа логов //Function for multi-threaded log analysis"""
 
     parser = LogParser(LOG_FILE)
 
@@ -16,16 +16,16 @@ def process_logs():
 
     mood = analyzer.analyze(messages)
 
-    print(f"Overall system mood: {'😊' if mood > 0 else '😐' if mood == 0 else '😢'}")
+    print(f"Overall system mood: {'goooood' if mood > 0 else 'mnuuh' if mood == 0 else 'Thats a sad story'}")
 
 if __name__ == "__main__":
 
     start_time = time.time()
 
-    # Запуск в нескольких потоках Running in multiple threads
+    """Запуск в нескольких потоках //Running in multiple threads"""
     threads = []
     for _ in range(3):
-        
+
         t = threading.Thread(target=process_logs)
         threads.append(t)
         t.start()

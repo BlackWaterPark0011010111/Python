@@ -56,7 +56,7 @@ class DeviceFactory:
 #Smart Home Singleton
 class SmartHomeSystem:
     _instance = None
-
+    devices: DefaultDict[str, List[Device]]#нужно объявить devices как атрибут класса с аннотацией, а затем инициализируем его в методе __new__.
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super().__new__(cls)

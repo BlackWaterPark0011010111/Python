@@ -61,7 +61,7 @@ class Book:
     def __str__(self):
         return f"Book[name={self._name},{str(self._author)},price={self._price},qty={self._qty}]"
 
-# Тестирование классов
+#  тесты
 if __name__ == "__main__":
     author1 = Author("J.K. Rowling", "jk.rowling@email.com", Gender.FEMALE)
     author2 = Author("George R.R. Martin", "grrm@email.com", Gender.MALE)

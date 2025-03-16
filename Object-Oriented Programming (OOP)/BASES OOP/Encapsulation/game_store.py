@@ -1,6 +1,6 @@
 # Класс игры
 class Game:
-    def __init__(self, name, price):  #задаём название и цену
+    def __init__(self, name, price):  
         self.name = name  
         self.price = price 
         self.is_bought = False  #куплена ли игра, по умолчанию False
@@ -10,7 +10,7 @@ class Game:
             self.is_bought = True  #меняем статус на "куплено"
             print(f"Игра '{self.name}' куплена за {self.price} рублей!")
         else:
-            print(f"Игра '{self.name}' уже куплена!")  #если уже куплена
+            print(f"Игра '{self.name}' уже куплена!")  
 
     def __str__(self):  #для вывода информации об игре
         return f"Игра: {self.name}, Цена: {self.price} руб., Куплена: {'Да' if self.is_bought else 'Нет'}"

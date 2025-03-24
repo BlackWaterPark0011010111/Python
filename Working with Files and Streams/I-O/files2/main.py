@@ -216,7 +216,7 @@ def generate_pending_jobs_report():
     # проверяем, существует ли файл jobs.csv
     if not os.path.exists(jobs_file):
         print(f"File {jobs_file} does not exist!")
-        return  
+        return   
 
     # собираем данные о незавершенных задачах
     pending_jobs = []

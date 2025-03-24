@@ -220,7 +220,7 @@ def generate_pending_jobs_report():
 
     # собираем данные о незавершенных задачах
     pending_jobs = []
-    with open(jobs_file, mode='r') as file:
+    with open(jobs_file,  mode='r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             if row['status'] != 'done':

@@ -41,4 +41,5 @@ except ValueError:
 try:
     secret = getpass.getpass("Нажмите Ctrl+C во время ввода: ")
 except KeyboardInterrupt:
-    print("\nОтменено пользователем!")
+    print("\nCanceled by USER!")
+print("Длина ввода: " + len(hidden_input))  # TypeError: can only concatenate str to str 

@@ -3,9 +3,10 @@ import sys
 
 password = getpass.getpass("Введите пароль: ")  # основной способ
 print("Пароль принят! (но не выводим его на экран)")
-# password = getpass.getpass()  # без подсказки — тоже работает
+# password = getpass.getpass() 
 # password = getpass.getpass(stream=sys.stderr)  # вывод подсказки в stderr (не всегда видно)
-
+#не работает в юпитер #TODO: (разобраться потом)
+# getpass.getpass() в PyCharm показывает ввод — это баг?
 
 try:
     hidden_input = getpass.getpass("Попробуйте ввести текст скрыто: ")

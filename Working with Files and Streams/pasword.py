@@ -1,46 +1,59 @@
+
 import getpass
-import sys 
+#import sys
+#import os 
 
-password = getpass.getpass("Введите пароль: ")  # основной способ
-print("Пароль принят! (но не выводим его на экран)")
-# password = getpass.getpass() 
-# password = getpass.getpass(stream=sys.stderr)  # вывод подсказки в stderr (не всегда видно)
-#не работает в юпитер #TODO: (разобраться потом)
-# getpass.getpass() в PyCharm показывает ввод — это баг?
+def main():
+    """Основная функция для тестирования getpass"""
+    
+    print("\n=== Тест 1: Базовый ввод ===")
+    
+    pwd = getpass.getpass("Введите пароль через getpass: ")
+   #pwd = getpass.getpass()  
+    print(f"Вы ввели пароль длиной {len(pwd)} символов")
+   #print("Содержимое:", pwd)
+    
+    print("\n=== Тест 2: Обычный ввод ===")
+    
+    visible_pwd = input("Введите пароль через input: ")
+    print(f"Видимый ввод: {visible_pwd}")
+   #print("Длина getpass:", len(pwd), "| Длина input:", len(visible_pwd))
+    
+    print("\n=== Тест 3: Обработка ошибок ===")
+    
+    try:
+        test_input = getpass.getpass("Попробуйте прервать ввод (Ctrl+C): ")
+        print("Успешный ввод! Длина:", len(test_input))
+    except KeyboardInterrupt:
+        print("\nВвод был прерван пользователем!")
+    except Exception as e:
+        print(f"Произошла ошибка: {e}")
+    
+    print("\n=== Тест 4: Граничные случаи ===")
+    
+    empty_input = getpass.getpass("Попробуйте ввести пустой пароль (просто Enter): ")
+   #empty_input = getpass.getpass(prompt="", stream=None)  #альтернатива
+    if not empty_input:
+        print("Вы ввели пустой пароль!")
+    else:
+        print("Вы ввели непустой пароль длиной", len(empty_input))
+    
+    print("\n=== Тест 5: Ввод непарольных данных ===")
+    
+    number_input = getpass.getpass("Введите число скрыто: ")
+    try:
+        number = int(number_input)
+        print(f"Вы ввели число: {number}")
+       #print("Квадрат числа:", number**2)  
+    except ValueError:
+        print("Это не число!")
+    
+    print("\n=== Выводы ===")
+    print("1. getpass надежно скрывает ввод в консоли")
+    print("2. В IDE может работать некорректно")
+    print("3. Подходит не только для паролей, но и для другого скрытого ввода")
+   #print("4. Дополнительные исследования: ...")  
 
-try:
-    hidden_input = getpass.getpass("Попробуйте ввести текст скрыто: ")
-    print(f"Длина ввода: {len(hidden_input)}") 
-except Exception as e:
-    print(f"Ошибка: {e}")  
-
-visible_input = input("Теперь введите текст видимо: ")
-print(f"Видимый ввод: '{visible_input}'")  # демонстрация разницы
-username = getpass.getuser()  # получаем имя 
-print(f"Ваш системный логин: {username}")
-
-import os
-os.environ['USER'] = 'test_user'  # попытка обмануть getuser()
-print(f"Обманчивый логин: {getpass.getuser()}")  # всё равно вернёт настоящий
-
-
-try:
-    fake_password = getpass.getpass("Попробуйте ввести пароль (но не в консоли): ")
-except getpass.GetPassWarning:
-    print("Внимание: ввод может быть виден!") 
-except Exception as e:
-    print(f"Неожиданная ошибка: {e}")
-
-
-hidden_number = getpass.getpass("Введите число скрыто: ")
-try:
-    number = int(hidden_number)
-    print(f"Вы ввели число: {number}")
-except ValueError:
-    print("Это не число!")
-
-try:
-    secret = getpass.getpass("Нажмите Ctrl+C во время ввода: ")
-except KeyboardInterrupt:
-    print("\nCanceled by USER!")
-print("Длина ввода: " + len(hidden_input))  # TypeError: can only concatenate str to str 
+if __name__ == "__main__":
+    main()
+   #test_additional_functions()

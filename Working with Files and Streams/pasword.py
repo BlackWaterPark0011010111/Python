@@ -44,7 +44,7 @@ def main():
     try:
         number = int(number_input)
         print(f"Вы ввели число: {number}")
-       #print("Квадрат числа:", number**2)  
+       #print("Квадрат числа:", number**2)   
     except ValueError:  
         print("Это не число!")
     

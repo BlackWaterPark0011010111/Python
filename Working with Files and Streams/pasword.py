@@ -38,7 +38,7 @@ def main():
     else:
         print("Вы ввели непустой пароль длиной", len(empty_input))
     
-    
+
     print("\n=== Тест 5: Ввод непарольных данных ===")
     
     number_input = getpass.getpass("Введите число скрыто: ")

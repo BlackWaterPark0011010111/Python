@@ -46,7 +46,7 @@ def main():
         number = int(number_input) 
         print(f"Вы ввели число: {number}")
        #print("Квадрат числа:", number**2)   
-    except ValueError:  
+    except ValueError:    
         print("Это не число!")
     
     print("1. getpass надежно скрывает ввод в консоли")

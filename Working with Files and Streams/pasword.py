@@ -43,7 +43,7 @@ def main():
     
     number_input = getpass.getpass("Введите число скрыто: ")
     try:
-        number = int(number_input)
+        number = int(number_input) 
         print(f"Вы ввели число: {number}")
        #print("Квадрат числа:", number**2)   
     except ValueError:  

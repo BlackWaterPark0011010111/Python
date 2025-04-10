@@ -41,7 +41,7 @@ def main():
     try:
         number = int(number_input) 
         print(f"You entered number: {number}")
-       #print("Square of number:", number**2)  #квадрат числа
+       #print("Square of number:", number**2)  #квадрат числа 
     except ValueError:    
         print("This is not a number!")  
      

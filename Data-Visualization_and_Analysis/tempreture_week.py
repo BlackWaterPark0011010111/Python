@@ -1,3 +1,4 @@
+#data visualization imports / импорт библиотек для визуализации
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
@@ -5,8 +6,9 @@ import pandas as pd
 
 print("----------------------------------------------------------------1----")
 """
-Построение графика температур
-Описание: У вас есть данные о температуре в течение недели. Постройте график изменения температуры по дням недели.
+temperature plot / график температур
+description: you have weekly temperature data. plot temperature changes by day.
+описание: у вас есть данные о температуре в течение недели. постройте график изменения температуры по дням недели.
 """
 days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
 temperatures = [22, 24, 20, 19, 21, 23, 25]
@@ -16,14 +18,11 @@ plt.xlabel('Days')
 plt.ylabel('Temperature (°C)')
 plt.show()
 
-
-
-
-
 print("---------------------------------------------------------------2-----")
-
-"""Столбчатая диаграмма для оценок
-Описание: У вас есть оценки студентов по 5 предметам. Постройте столбчатую диаграмму для этих данных.
+"""
+bar chart for grades / столбчатая диаграмма для оценок
+description: you have student grades for 5 subjects. create a bar chart.
+описание: у вас есть оценки студентов по 5 предметам. постройте столбчатую диаграмму.
 """
 subjects = ['Math', 'Science', 'History', 'English', 'Art']
 scores = [85, 92, 78, 88, 95]
@@ -35,48 +34,39 @@ plt.ylabel('Scores')
 plt.show()
 
 print("---------------------------------------------------------------3-----")
-
-"""Диаграмма рассеяния для роста и веса
-Описание: У вас есть данные о росте и весе группы людей. Постройте диаграмму рассеяния для этих данных.
 """
-
+scatter plot for height-weight / диаграмма рассеяния для роста и веса
+description: you have height and weight data. create a scatter plot.
+описание: у вас есть данные о росте и весе. постройте диаграмму рассеяния.
+"""
 heights = [150, 160, 170, 180, 190]
 weights = [45, 55, 65, 75, 85]
 
-# Plotting scatter plot
 plt.scatter(heights, weights, color='red')
 plt.title('Height vs Weight')
 plt.xlabel('Height (cm)')
 plt.ylabel('Weight (kg)')
 plt.show()
+
 print("---------------------------------------------------------------4-----")
-
 """
-Визуализация распределения данных (Гистограмма и Ядерная оценка плотности)
-Описание: У вас есть набор случайных данных. Постройте гистограмму, а также добавьте к ней график ядерной оценки плотности, чтобы увидеть, как данные распределяются.
+data distribution visualization / визуализация распределения данных
+description: plot histogram with kde for random data.
+описание: постройте гистограмму с kde для случайных данных.
 """
-
-
-# Generating random data
 data = np.random.normal(loc=50, scale=15, size=1000)
-
-# Построение гистограммы с KDE  Plotting histogram with KDE
-
 sns.histplot(data, kde=True, color='blue', bins=30)
-
-# Настройки графика GRAPHIC SETTINGS
-plt.title('Histogram and KDE of Random Data')
+plt.title('Histogram and KDE')
 plt.xlabel('Value')
 plt.ylabel('Frequency')
 plt.show()
+
 print("--------------------------------------------------------------5-----")
-
-
 """
-У вас есть данные о продажах по различным регионам и категориям товаров. Постройте тепловую карту для анализа корреляций между различными переменными.
+sales heatmap / тепловая карта продаж
+description: create correlation heatmap for sales data.
+описание: постройте тепловую карту корреляций для данных о продажах.
 """
-
-
 data = {
     'Region 1': [100, 200, 150, 130],
     'Region 2': [80, 120, 140, 160],
@@ -84,79 +74,60 @@ data = {
     'Category A': [50, 60, 45, 55],
     'Category B': [75, 80, 70, 85]
 }
-
 df = pd.DataFrame(data, index=['Q1', 'Q2', 'Q3', 'Q4'])
-
-
 sns.heatmap(df.corr(), annot=True, cmap='coolwarm', fmt='.2f')
-
-
-plt.title('Heatmap of Correlations')
+plt.title('Correlation Heatmap')
 plt.show()
 
 print("------------------------------------------------------------6-----")
-
-""" Линейный график с несколькими линиями для разных групп
-Описание: У вас есть данные о продажах по различным продуктам в разные месяцы. Постройте линейный график, где будут отображены данные для нескольких продуктов одновременно.
-
 """
-
+multi-line plot / линейный график с несколькими линиями
+description: plot sales data for multiple products over time.
+описание: постройте график продаж нескольких продуктов за период.
+"""
 months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
 product_a_sales = [200, 220, 250, 270, 290, 310]
 product_b_sales = [180, 190, 210, 240, 260, 280]
 product_c_sales = [150, 170, 190, 210, 230, 250]
 
-# Построение линейного графика
 plt.plot(months, product_a_sales, label='Product A', marker='o', color='blue')
 plt.plot(months, product_b_sales, label='Product B', marker='x', color='red')
 plt.plot(months, product_c_sales, label='Product C', marker='s', color='green')
 
-# Настройки графика
-plt.title('Sales of Products Over 6 Months')
+plt.title('Product Sales')
 plt.xlabel('Months')
 plt.ylabel('Sales')
 plt.legend()
 plt.show()
 
 print("-------------------------------------------------------------7-----")
-
-""" Диаграмма рассеяния с цветами в зависимости от категории
-Описание: У вас есть данные о зарплатах и опыте сотрудников, а также информация о их должностях. Постройте диаграмму рассеяния, где цвет точек будет зависеть от должности.
-
 """
-
+colored scatter plot / диаграмма рассеяния с цветами
+description: plot salary vs experience colored by position.
+описание: постройте график зарплат от опыта с цветами по должностям.
+"""
 experience = [1, 2, 3, 5, 6, 7, 2, 4, 8, 3]
 salary = [40000, 45000, 50000, 65000, 70000, 75000, 48000, 52000, 80000, 54000]
 positions = ['Junior', 'Junior', 'Mid', 'Senior', 'Senior', 'Senior', 'Junior', 'Mid', 'Senior', 'Mid']
 
-
 colors = {'Junior': 'blue', 'Mid': 'orange', 'Senior': 'green'}
 scatter_colors = [colors[pos] for pos in positions]
 
-
 plt.scatter(experience, salary, c=scatter_colors, s=100)
-
-
 plt.title('Experience vs Salary')
 plt.xlabel('Years of Experience')
 plt.ylabel('Salary')
 plt.show()
 
 print("---------------------------------------------------------------8-----")
-
-""" Визуализация с использованием Pandas и matplotlib (Круговая диаграмма)
-Описание: У вас есть данные о распределении расходов в бюджете компании. Постройте круговую диаграмму для визуализации долей расходов по категориям.
 """
-
-# Данные о расходах 
+pie chart / круговая диаграмма
+description: visualize company budget distribution.
+описание: визуализируйте распределение бюджета компании.
+"""
 expenses = {'Marketing': 5000, 'R&D': 7000, 'Operations': 4000, 'Sales': 3000, 'HR': 2000}
-
-# Преобразование данных в DataFrame Converting data to DataFrame
 df = pd.DataFrame(list(expenses.items()), columns=['Category', 'Amount'])
 
-# Построение круговой диаграммы  Plotting a pie chart
 plt.pie(df['Amount'], labels=df['Category'], autopct='%1.1f%%', startangle=140)
-
-# Настройки графика Plot settings
-plt.title('Company Budget Expenses Distribution')
+plt.title('Budget Distribution')
 plt.show()

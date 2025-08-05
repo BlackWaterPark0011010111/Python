@@ -40,7 +40,7 @@ parser.add_argument('age', nargs='?', default=100, type=int, help='Age')
 Добавляем флаг --fast  - это флаг, который можно просто включить при запуске.
 
 parser.add_argument('--fast', action='store_true', help='Enable fast mode')
-Если его указать, args.fast станет True, иначе — False.
+Если его указать, args.fast станет True, иначе - False.
 проверяем флаг --fast
 if args.fast:
     print("fast mode enabled")

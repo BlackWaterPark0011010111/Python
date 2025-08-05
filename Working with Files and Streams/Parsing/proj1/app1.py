@@ -8,7 +8,7 @@ import sys
 if '--help' in sys.argv:# .argv, мы используем чтобы прочитать аргументы командной строки.
     #здесь мы роверяем, есть ли вообще аргумент --help в списке sys.argv.
     #если передам  --help параметр,то будем видеть вывод помощи.
-    #если --fast,  то выводим "fast mode enabled", иначе — "slow mode enabled".
+    #если --fast,  то выводим "fast mode enabled", иначе - "slow mode enabled".
     print("This is a simple program to check the mode. Use --fast for fast mode and --help for help.")
 elif '--fast' in sys.argv: # python app1.py --fast
     print("fast mode enabled")

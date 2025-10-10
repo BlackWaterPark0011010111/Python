@@ -6,7 +6,7 @@ class Restaurant:
     def describe(self):
         print(f'This is a {self.name} restaurant and its a {self.type} restaurant')
 
-    def surved(self):
+    def served(self):
         print(f'Well weve got {self.number_served}')
     def open_restaurant(self):
         print(f'A {self.name} is open now!')
@@ -24,7 +24,7 @@ restaurant1.open_restaurant()
 
 
 restaurant.number_served = 15
-restaurant.surved()
+restaurant.served()
 
 class IceCreamStand(Restaurant):
     def __init__(self,name,type):

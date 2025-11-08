@@ -1,0 +1,21 @@
+2025-02-06 21:58:59,608 - __main__ - INFO - Приложение запущено - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\main.py:161
+2025-02-06 21:58:59,610 - module_b - ERROR - Ошибка из функции B - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_b.py:8
+2025-02-06 21:58:59,610 - module_b - CRITICAL - Критическая ошибка в функции B - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_b.py:9
+2025-02-06 21:58:59,611 - asyncio - DEBUG - Using proactor: IocpProactor - C:\Users\roxfo\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py:631
+2025-02-06 21:59:01,624 - __main__ - INFO - Приложение завершено - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\main.py:177
+2025-02-06 22:02:45,808 - __main__ - INFO - Приложение запущено - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\main.py:167
+2025-02-06 22:02:45,809 - module_a - DEBUG - Запущена функция A - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_a.py:6
+2025-02-06 22:02:45,810 - module_a - INFO - Функция A завершена - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_a.py:11
+2025-02-06 22:02:45,811 - module_b - ERROR - Ошибка из функции B - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_b.py:8
+2025-02-06 22:02:45,811 - module_b - CRITICAL - Критическая ошибка в функции B - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_b.py:9
+2025-02-06 22:02:45,812 - asyncio - DEBUG - Using proactor: IocpProactor - C:\Users\roxfo\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py:631
+2025-02-06 22:02:47,823 - async_worker - ERROR - Произошла ошибка: Что-то пошло не так! - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\async_worker.py:18
+2025-02-06 22:02:47,824 - __main__ - INFO - Приложение завершено - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\main.py:183
+2025-02-06 22:03:13,653 - __main__ - INFO - Приложение запущено - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\main.py:167
+2025-02-06 22:03:13,654 - module_a - DEBUG - Запущена функция A - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_a.py:6
+2025-02-06 22:03:13,655 - module_a - INFO - Функция A завершена - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_a.py:11
+2025-02-06 22:03:13,655 - module_b - ERROR - Ошибка из функции B - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_b.py:8
+2025-02-06 22:03:13,656 - module_b - CRITICAL - Критическая ошибка в функции B - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\module_b.py:9
+2025-02-06 22:03:13,657 - asyncio - DEBUG - Using proactor: IocpProactor - C:\Users\roxfo\AppData\Local\Programs\Python\Python313\Lib\asyncio\proactor_events.py:631
+2025-02-06 22:03:15,663 - async_worker - ERROR - Произошла ошибка: Что-то пошло не так! - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\async_worker.py:18
+2025-02-06 22:03:15,663 - __main__ - INFO - Приложение завершено - c:\Users\roxfo\Desktop\Python\logging\Logger\LoggingV0.2\main.py:183

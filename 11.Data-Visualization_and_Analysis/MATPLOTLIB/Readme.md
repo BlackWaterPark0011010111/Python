@@ -523,7 +523,7 @@ ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')  # справа от гр�
 ax.legend(bbox_to_anchor=(0.5, -0.1), loc='upper center')  # под графиком
 ax.legend(bbox_to_anchor=(0, 0, 1, 1), loc='center')  # на весь график
 
-
+ 
 Почему именно такие числа в bbox_to_anchor:
 
 (0, 0) = левый нижний угол графика

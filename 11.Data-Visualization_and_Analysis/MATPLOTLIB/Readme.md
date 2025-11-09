@@ -479,3 +479,164 @@ get_color()                | Возвращает цвет текста         
 get_fontsize()             | Возвращает размер шрифта        | size = text_obj.get_fontsize()
 get_position()             | Возвращает позицию (x, y)       | x, y = text_obj.get_position()
 get_window_extent()        | Возвращает bounding box текста  | bbox = text_obj.get_window_extent()
+
+
+
+LEGEND
+
+когда у нас есть графики и нам нужно добавить краткое описание к каждому графику,то нам нужно:
+1) вызвать метод который называется legeng() для нашей координатной оси ,например (ax), вот так:
+ax.legend()
+# если мы вызываем legend(),то метод label уже не нужен
+legend(['1','2']) # тут мы даем название графикам в окне 1 и 2.
+
+2) вызвать именованный параметр label там где определяем параметры графика на оси и присвоить ему название линии к которой хотим видеть описание,вот так ---->
+ax.plot(np.arange(0,5,0.5), label='line 1')#первый график
+ax.plot(np.arange(0,5,0.5), label='line 2')#второй график
+можно добавить стиль этих линий,например чтобы они были пунктирными или еще какими-то,вот так
+
+ax.plot(np.arange(0,5,0.5),'--o' label='line 1')
+
+
+мы также можем указать в каком углу мы хотим видеть окно с подписью графиков с помощью переменной loc, мы ее прописываем в ax.legend .............  --->вот так
+
+ax.legend(loc='upper right')
+
+Параметр loc может принимать такие значения:
+
+'best'
+'upper right'
+'upper left'
+'lower right'
+'right'
+'center left'
+'center right'
+'lower center'
+'upper center'
+'center'
+
+
+в качестве альтернативы если мы хотим задать отображение легенды через оси координат,то нужно использовать bbox_to_anchor=() ----> например
+bbox_to_anchor=(0.5,0.7) от 0 и до 1 максимум
+
+ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')  # справа от графика
+ax.legend(bbox_to_anchor=(0.5, -0.1), loc='upper center')  # под графиком
+ax.legend(bbox_to_anchor=(0, 0, 1, 1), loc='center')  # на весь график
+
+
+Почему именно такие числа в bbox_to_anchor:
+
+(0, 0) = левый нижний угол графика
+
+(1, 1) = правый верхний угол графика
+
+(1.05, 1) = чуть-чуть ПРАВЕЕ правого верхнего угла
+
+(0, 1.05) = чуть-чуть ВЫШЕ левого верхнего угла
+
+# ############################################
+loc и bbox_to_anchor  ----->
+ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+если мы хотим указать параметр который больше 1,потому что всего масштаю окна расчитан с 0 и до 1.
+и если мы пишем 1.2--- это значит что мы на 20% возвышаем над допустимыми размерами и будет ошибка.мы будем находится уже за пределами графика,вот!  
+чтобы этого не было нужно использовать bbox_to_anchor для того чтобы табличка была не сбита со своих надстроек и была действительно в том расположении где мы прописали,но тогда,нужно  
+# ##############################################
+# Комбинация loc и bbox_to_anchor
+ax.legend(bbox_to_anchor=(0.5, 0.5), loc='center')
+
+для оформления рамки в окне с легендой:
+
+fig = plt.figure(figsize=(7,4))
+ax = fig.add_subplot()
+
+line1, = ax.plot(np.arange(0,5,0.25), '--o', label='Линия 1')
+line2, = ax.plot(np.arange(0,10,0.5), ':s', label='Линия 2')
+
+# настройка легенды
+legend = ax.legend(
+    loc='upper right',
+    fontsize=12,                   #размер шрифта
+    title='Легенда',               #заголовок легенды
+    title_fontsize=14,             #размер шрифта заголовка
+    frameon=True,                  #показывать рамку
+    fancybox=True,                 #скругленные углы
+    shadow=True,                   #тень
+    facecolor='white',             #цвет фона
+    edgecolor='black',             #цвет рамки
+    framealpha=0.9,                #прозрачность фона
+    ncol=1,                        #количество столбцов
+    handlelength=1.5,              #длина элементов
+    handletextpad=0.5,             #отступ текста
+    borderpad=1,                   #отступ от границ
+    labelspacing=0.5               #расстояние между метками
+)
+
+
+
+# ###################################################
+КАСТОМНЫЕ ЛЕГЕНДЫ
+
+
+
+
+from matplotlib.lines import Line2D
+
+custom_lines = [
+    Line2D([0], [0], color='blue', lw=2, linestyle='--'),
+    Line2D([0], [0], color='red', lw=2, marker='o')
+]
+
+ax.legend(custom_lines, ['пунктирная', 'с маркерами'])
+
+
+
+
+# #######################################################
+get_frame()----- для работы только с рамкой легенды,то есть толщина,цвет,цвет фона рамки,прозрачность,
+legend = ax.legend()
+frame = legend.get_frame()
+
+# список методов get_frame():
+frame.set_facecolor('lightblue')    #цвет фона
+frame.set_edgecolor('red')          #цвет рамки
+frame.set_linewidth(3)              #толщина рамки
+frame.set_linestyle('--')           #стиль линии рамки
+frame.set_alpha(0.7)                #прозрачность
+frame.set_boxstyle('round,pad=0.5') #стиль рамки
+frame.set_fill(True)                #заливка включена/выключена
+frame.set_capstyle('round')         #стиль концов линий
+frame.set_joinstyle('round')        #стиль соединений углов
+
+# Дополнительные настройки:
+frame.set_hatch('//')               #штриховка
+frame.set_zorder(10)                #порядок отображения
+
+
+# ##############################################
+
+# c get_title()------- 
+legend = ax.legend(title='Мой заголовок')
+title = legend.get_title()
+
+# Методы get_title():
+title.set_color('red')              #цвет текста
+title.set_fontsize(16)              #размер шрифта
+title.set_fontweight('bold')        #жирность
+title.set_fontstyle('italic')       #наклон
+title.set_family('serif')           #семейство шрифтов
+title.set_ha('center')              #горизонтальное выравнивание
+title.set_va('top')                 #вертикальное выравнивание
+title.set_rotation(0)               #поворот текста
+title.set_backgroundcolor('yellow') #цвет фона текста
+title.set_alpha(0.8)                #прозрачность
+
+# для комплексной настройки - только словарями:
+title.set_fontproperties({
+    'family': 'Arial',
+    'size': 14,
+    'weight': 'bold',
+    'style': 'italic'
+})
+
+
+

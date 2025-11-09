@@ -12,4 +12,4 @@ ax.grid(which='major', lw=2)
 ax.grid(which='minor' )
 ax.xaxis.set_minor_locator(NullLocator())
 
-plt.show()  
+plt.show()   

@@ -667,7 +667,7 @@ title.set_fontproperties({
 # #############################
 # step_stem_scatter_plots.py
 
- import numpy as np
+import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -712,7 +712,7 @@ plt.show()
 
 
 
-
+# #############################
 # STEM-график
 
 
@@ -734,3 +734,21 @@ plt.show()
 # точечный график
 # #######################
 с помощью функции scater()
+
+
+
+fig=plt.figure(figsize=(4,4))
+ax=fig.add_subplot()
+
+x=np.random.normal(0,2,500)
+y=np.random.normal(0,2,500)
+ax.scatter(x,y)
+#функция с параметрами:
+ax.scatter(x,y,s=50,c='g',linewidths=1,marker='s',edgecolors='r')
+s=50, === размер 0
+c='g',===цвет зеленый
+linewidths=1, ===толщина линии 1
+marker='s' ===маркер s
+,edgecolors='r'===цвет граней точек красный
+ax.grid()
+plt.show()

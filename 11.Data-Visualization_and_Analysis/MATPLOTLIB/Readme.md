@@ -965,7 +965,7 @@ z=np.cos(x)
 ax_3d.plot(x, x, z)
 plt.show() 
 
-   
+    
 
 # Для наименования осей используем set_label()
 ax_3d.set_xlabel('X')

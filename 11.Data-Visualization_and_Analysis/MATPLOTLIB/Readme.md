@@ -1,14 +1,15 @@
-Matplotlib Pyplot
-Matplotlib Plotting
-Matplotlib Markers
-Matplotlib Line
-Matplotlib Labels
-Matplotlib Grid
-Matplotlib Subplot
-Matplotlib Scatter
-Matplotlib Bars
-Matplotlib Histograms
-Matplotlib Pie Charts  
+Matplotlib:
+           Pyplot
+           Plotting
+           Markers
+           Line
+           Labels
+           Grid
+           Subplot
+           Scatter
+           Bars
+           Histograms
+           Pie Charts  
 
 
 PYPLOT:

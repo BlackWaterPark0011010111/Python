@@ -110,7 +110,7 @@ plt.setp(lines,linestyle=':')
 ТАКЖЕ мы можем менять их цвет------------
 
 🔵	'b'	blue	
-🟢	'g'	green	
+🟢	'g'	green	 
 🔴	'r'	red
 🟡	'y'	yellow	
 ⚫	'k'	black

@@ -114,7 +114,7 @@ plt.setp(lines,linestyle=':')
 🔴	'r'	red
 🟡	'y'	yellow	
 ⚫	'k'	black
-⚪	'w'	white
+⚪	'w'	white 
 🎨	'c'	cyan 
 🟣	'm'	magen 
 plt.plot(x, y, 'ro')     ----> красные кружки

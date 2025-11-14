@@ -113,7 +113,7 @@ plt.setp(lines,linestyle=':')
 🟢	'g'	green	 
 🔴	'r'	red
 🟡	'y'	yellow	
-⚫	'k'	black   
+⚫	'k'	black    
 ⚪	'w'	white 
 🎨	'c'	cyan  
 🟣	'm'	magen 

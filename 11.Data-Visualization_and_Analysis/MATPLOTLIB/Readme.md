@@ -115,7 +115,7 @@ plt.setp(lines,linestyle=':')
 🟡	'y'	yellow	
 ⚫	'k'	black
 ⚪	'w'	white 
-🎨	'c'	cyan 
+🎨	'c'	cyan  
 🟣	'm'	magen 
 plt.plot(x, y, 'ro')     ----> красные кружки
 plt.plot(x, y, 'b--',x2, y2,'k:')    ----> синяя штриховая линия

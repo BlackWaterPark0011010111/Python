@@ -1,16 +1,16 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-fig,ax= plt.subplots()
-x=np.array([-3,-2,-1,0,1,1,2,3])#задаем параболу
-y=np.array([9,4,1,0,1,1,4,9])#задаем параболу
-ax.plot(x,y)                #RGB        #отключаем линии,рисуем точки
-ax.plot(x,np.sin(x),color=(1.0,0.2,0.3),linestyle='None', marker='.')#точечная
-ax.plot(x, x + 5,color='blue', linestyle='--')#линейная
-ax.plot(x, x + 3,color='g',linestyle=':')#линейная
-ax.plot(x, np.cos(x), color='0.72', linestyle='-.')#серая штрих-пунктирная
-ax.plot(x,x,color="#C1050E",linestyle='--')
-plt.show()
+#fig,ax= plt.subplots()
+#x=np.array([-3,-2,-1,0,1,1,2,3])#задаем параболу
+#y=np.array([9,4,1,0,1,1,4,9])#задаем параболу
+#ax.plot(x,y)                #RGB        #отключаем линии,рисуем точки
+#ax.plot(x,np.sin(x),color=(1.0,0.2,0.3),linestyle='None', marker='.')#точечная
+#ax.plot(x, x + 5,color='blue', linestyle='--')#линейная
+#ax.plot(x, x + 3,color='g',linestyle=':')#линейная
+#ax.plot(x, np.cos(x), color='0.72', linestyle='-.')#серая штрих-пунктирная
+#ax.plot(x,x,color="#C1050E",linestyle='--')
+#plt.show()
 
   
 #

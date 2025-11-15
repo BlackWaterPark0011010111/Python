@@ -15,7 +15,7 @@ plt.show()
   
 #
 #fig,ax=plt.subplots()
-#x=np.array([-9,-5,-2,-1,0,1,5,9])
+#x=np.array([-9,-5,-2,-1,0,1,5,9]) 
 #y=np.array([9,5,2,1,0,1,5,9])
 #ax.plot(x,y, marker='o')
 #ax.plot(0.5 * x, y, marker='>')

@@ -12,7 +12,7 @@ ax.plot(x, np.cos(x), color='0.72', linestyle='-.')#серая штрих-пун
 ax.plot(x,x,color="#C1050E",linestyle='--')
 plt.show()
 
-
+ 
 #
 #fig,ax=plt.subplots()
 #x=np.array([-9,-5,-2,-1,0,1,5,9])

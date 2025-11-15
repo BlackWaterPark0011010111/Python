@@ -54,10 +54,18 @@ import numpy as np
 
 
 
+width = 0.4
+x_list = list(range(0,5))
+y1_list = [22,17,81,41,25]
+y2_list = [62,37,39,36,49]
+x_index = np.arange(len(x_list))
 
+plt.title('Salary Graph')
+plt.xticks(x_index,['Mon','Tue','Wed','Thurs','Fri'])
+plt.xlabel('DAYS')
+plt.ylabel('salary, $')
+plt.bar(x_index - (width) / 2,y1_list, label='Mark',width=width)
+plt.bar(x_index + (width / 2), y2_list, label='Leo',width=width)
+plt.legend()
 
-
-
-
-
-
+plt.show()

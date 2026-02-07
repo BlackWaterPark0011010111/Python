@@ -258,7 +258,7 @@ sum(2,4,6) =12
 def quicksort(array):
     if len(array) < 2:
        return array      
-
+ 
 
 33  10  15  7  
 опорным берем 33

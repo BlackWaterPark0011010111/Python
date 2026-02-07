@@ -260,7 +260,7 @@ def quicksort(array):
        return array     
 
 
-33  10  15  7 
+33  10  15  7  
 опорным берем 33
 10 15  7  33  []
 

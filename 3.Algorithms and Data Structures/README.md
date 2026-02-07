@@ -257,7 +257,7 @@ sum(2,4,6) =12
 
 def quicksort(array):
     if len(array) < 2:
-       return array     
+       return array      
 
 
 33  10  15  7  

@@ -61,3 +61,25 @@ print(fact(5))
 • Стек поддерживает две операции: занесение и извлечение элементов.
 • Все вызовы функций сохраняются в стеке вызовов.
 • Если стек вызовов станет очень большим, он займет слишком много памяти"""
+
+food="Pizza"
+#food.replace("z", "s")
+#print(food)
+print(food.replace("z", "s"))
+
+def fact(x):
+  if x==1:
+    return 1
+  else:
+    return x * fact(x-1)
+
+print(fact(3)) 
+
+def recursive_count(lst):
+   if not lst:
+      return 0
+   return 1+ recursive_count(lst[1:])
+
+print(recursive_count([1,2,3,4,5,6]))
+print(recursive_count([]))
+print(recursive_count(['a','b']))
